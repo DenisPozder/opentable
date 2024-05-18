@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, createContext, useEffect } from "react";
-import useAuth from "../../hooks/useAuth";
 import axios from "axios";
 import { getCookie } from "cookies-next";
 
@@ -60,7 +59,7 @@ export default function AuthContext({
         });
       }
 
-      const response = await axios.get("http://localhost:3000/api/auth/me", {
+      const response = await axios.get("https://opentable-mocha.vercel.app/api/auth/me", {
         headers: {
           Authorization: `Bearer ${jwt}`,
         },

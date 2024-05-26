@@ -23,7 +23,7 @@ const useAuth = () => {
     });
     try {
       const response = await axios.post(
-        "https://opentable-mocha.vercel.app/api/auth/signin",
+        "http://localhost:3000/api/auth/signin",
         {
           email,
           password,
@@ -69,7 +69,7 @@ const useAuth = () => {
     });
     try {
       const response = await axios.post(
-        "https://opentable-mocha.vercel.app/api/auth/signup",
+        "http://localhost:3000/api/auth/signup",
         {
           email,
           password,
